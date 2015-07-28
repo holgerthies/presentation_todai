@@ -89,27 +89,49 @@
 \newtheorem{representation1}{Representation 1} 
 \newtheorem{representation1b}{Representation 1'} 
 \newtheorem{representation2}{Representation 2} 
-\title[Analytic Continuation in iRRAM]{Analytic Continuation in \irram}
-\author[A. Kawamura, F. Steinberg, H. Thies]{
-		Akitoshi Kawamura, Florian Steinberg, Holger Thies 
+\title[Case Studies in Exact Real Arithmetic]{Case Studies in Exact Real Arithmetic - Implementations and Empricial Evaluation}
+\author[ H. Thies]{
+		Holger Thies 
 }
-\institute[Theorietag]{
-  69. Workshop \"{u}ber Algorithmen und Komplexit\"{a}t, Technische Universit\"{a}t Ilmenau
+\institute[The University of Tokyo]{
+The University of Tokyo
 }
 \begin{document}
 \setbeamercolor{note}{fg=black,bg=lightgray} 
-\date{May 28, 2015}
+\date{July 31, 2015}
 \frame{
 \titlepage
 }
-\frame[<+->]{
-\frametitle{Table of Contents}
-\tableofcontents
-}
+%\frame[<+->]{
+%\frametitle{Table of Contents}
+%\tableofcontents
+%}
+\begin{frame}
+	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}
+	Background: Real Number Computations\par%
+    \end{beamercolorbox}
+\vfill
+\end{frame}
 \include{background}
+\begin{frame}
+	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}
+	Case Study: A Data Type for Analytic Functions\par%
+    \end{beamercolorbox}
+\vfill
+\end{frame}
 \include{motivation}
 \include{powerseries}
 \include{implementation}
+\begin{frame}
+	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}
+	Future Work\par%
+    \end{beamercolorbox}
+\vfill
+\end{frame}
+\include{future}
 \begin{frame}
 
     \vspace{\fill}
