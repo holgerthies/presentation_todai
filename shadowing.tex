@@ -23,7 +23,7 @@ Question (originally considered by Hammel, Yorke and Grebogi in 1987): How long 
 \frametitle{Computing the shadowing orbit}
 \begin{itemize}
 \item \irram can be used to exactly compute a shadowing orbit of length $N$
-\item First compute the psuedo orbit $(x_i)$
+\item First compute the pseudo orbit $(x_i)$
 \item Start with $y_N := x_N$ and iteratively compute $y_{i-1} = f^{-1}(y_i)$
 \item For $f^{-1} = 0.5 \pm \sqrt{0.25-\frac{x}{a}}$ choose the value that is on the same side of $0.5$ as $x_i$
 \item The backward procedure will stay close to the pseudo-orbit since $f^{-1}$ is a contraction.
