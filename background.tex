@@ -33,11 +33,11 @@
 				\draw<2->[-triangle 90] (2.5,-2) -- (2.5,-2.3);
 				\draw<2-> (2.5,-2.3) -- (2.5,-2.5);
 				\node<2-3> at (2.75,-2.25) {$d_n$};
-				\node<4-> at (2.85,-2.25) {$d_{n,i}$};
-				\node<4-> at (1.5,-1) {$(a_i)$};
-				\draw<4-> (1,-2) -- (1,-2.2);
-				\draw<4->[-triangle 90] (1,-2.5) -- (1,-2.2);
-				\node<4-> at (1.25,-2.25) {$1^i$};
+				%\node<4-> at (2.85,-2.25) {$d_{n,i}$};
+				%\node<4-> at (1.5,-1) {$(a_i)$};
+				%\draw<4-> (1,-2) -- (1,-2.2);
+				%\draw<4->[-triangle 90] (1,-2.5) -- (1,-2.2);
+				%\node<4-> at (1.25,-2.25) {$1^i$};
 		\end{tikzpicture}
 		\end{figure}
 		\begin{itemize}
@@ -47,8 +47,8 @@
 	\hfill
 	\begin{minipage}{.45\textwidth}
 		\onslide<2->{$d_n$ rational approximations}
-		\only<2-4>{\[ \left|d_{n} - x\right|\leq 2^{-n}. \]}
-		\only<5->{\[ \left|d_{n,i} - a_i\right|\leq 2^{-n}. \]}
+		\only<2->{\[ \left|d_{n} - x\right|\leq 2^{-n}. \]}
+		% \only<5->{\[ \left|d_{n,i} - a_i\right|\leq 2^{-n}. \]}
 	\end{minipage}
 \end{frame}
 \subsection{Real functions}
@@ -58,26 +58,26 @@
 		\begin{tikzpicture}
 			\path (-1.7,1.7) rectangle (3.7,-5.2);
 			%x
-				\draw<2-> (0,0) rectangle (3,-2);
-				\node<2-> at (1.5,-1) {$x$};
+				\draw<1-> (0,0) rectangle (3,-2);
+				\node<1-> at (1.5,-1) {$x$};
 				\draw<1-> (1,-2) -- (1,-2.2);
 				\draw<1->[-triangle 90] (1,-2.5) -- (1,-2.2);
-				\node<2-> at (.5,-2.25) {$1^n$};
+				\node<1-> at (.5,-2.25) {$1^n$};
 				\draw<1->[-triangle 90] (2,-2) -- (2,-2.3);
 				\draw<1-> (2,-2.3) -- (2,-2.5);
-				\node<2-> at (2.5,-2.25) {$d_n$};
+				\node<1-> at (2.5,-2.25) {$d_n$};
 			%f
 				\draw<1->[thick] (0,-2.5) rectangle (3,-4.5);
 				\node<1-> at (1.5,-3.5) {$f$};
 				\draw<1-> (1,-4.5) -- (1,-4.7);
 				\draw<1->[-triangle 90] (1,-5) -- (1,-4.7);
-				\node<3-> at (.5,-4.75) {$1^m$};
+				\node<1-> at (.5,-4.75) {$1^m$};
 				\draw<1->[-triangle 90] (2,-4.5) -- (2,-4.8);
 				\draw<1-> (2,-4.8) -- (2,-5);
-				\node<3-> at (2.5,-4.75) {$d'_m$};
+				\node<1-> at (2.5,-4.75) {$d'_m$};
 			%f(x)
-				\draw<3-> (-1.5,.5) rectangle (3.5,-4.5);
-				\node<3-> at (-.75,-2) {$f(x)$};
+				\draw<1-> (-1.5,.5) rectangle (3.5,-4.5);
+				\node<1-> at (-.75,-2) {$f(x)$};
 		\end{tikzpicture}
 	\end{minipage}
 	\hfill
@@ -87,8 +87,7 @@
 			A function $f:[0,1]\to\RR$ is called computable, \newline if there is a machine that,\newline when given oracle access to approximations to the argument $x$,\newline returns approximations to the value $f(x)$.
 		\end{definition}
 		\begin{itemize}
-			\item<4-> Multivariate functions have more oracles.
-			\item<5-> Computable functions are continuous.
+			\item<2-> Computable functions are continuous.
 		\end{itemize}
 	\end{minipage}
 \end{frame}
@@ -98,8 +97,7 @@
 \begin{itemize}[<+->]
 \item iRRAM is a C++ framework for exact real computations
 \item Ordinary C++ is extended by datatype REAL for computing with real numbers
-\item Usual arithmetic operations are implemented for REAL
-\item Other functions like abs, power, root, modulo, exp, log, sin, cos are also available
+\item Usual arithmetic operations and other functions like abs, power, root, modulo, exp, log, sin, cos are already implemented
 \end{itemize}
 \end{frame}
 \begin{frame}[<+->][fragile]

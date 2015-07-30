@@ -15,7 +15,7 @@
 %\item<4-> Represented as a pointer to a sequence, i.e. a function from \code{INTEGER} to \code{coeff\_type}
 %\end{itemize}
 %\end{frame}
-\begin{frame}[<+->]
+\begin{frame}
 \frametitle{Classes}
 \code{BA\_ANA<coeff\_type>}
 \begin{itemize}
@@ -23,7 +23,6 @@
 \item Standard operators \code{+}, \code{-}, \code{*} (both scalar multiplication and multiplication) are overloaded
 \item Integration, Differentiation and Evaluation are implemented
 \end{itemize}
-\pause
 \code{ANALYTIC\_RECT}
 \begin{itemize}
 \item A class for complex functions analytic on $[-1,1]$
@@ -32,13 +31,12 @@
 \end{itemize}
 \end{frame}
 \begin{frame}[<+->]
-\frametitle{Run-Time Evaluation}
+\frametitle{Runing Time Evaluation}
 \begin{itemize}
 	\item For both classes the running time analysis for different parameters and input functions were performed
 	\item The running times were in accordance to what was expected from theoretical analysis
 	\item The running time of iterated analytic continuation grows exponentially in the number of iterations 
-	\item Evaluating a function using analytic continuation is therefore very slow
-	\item It is not really usable (yet)
+	\item Evaluating a function using analytic continuation is therefore very slow and not really usable (yet)
 \end{itemize}
 \end{frame}
 

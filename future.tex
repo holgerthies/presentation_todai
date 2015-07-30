@@ -1,0 +1,53 @@
+\section{Future Work}
+\subsection{Overview}
+\begin{frame}[<+->]
+\frametitle{Goal}
+The goal is to improve practical usability of exact real arithmetic by developing algorithms that are
+\pause
+\begin{itemize}
+	\item Comparable in speed with their floating point variants
+	\item Fully specified
+	\item Provably correct
+	\item closed under composition
+\end{itemize}
+\pause
+For this, the behaviour (correctness, convergence, runtime) of advanced numerical algorithms has to be analyzed in detail. 
+\end{frame}
+\begin{frame}[<+->]
+\frametitle{Ordinary Differential Equations}
+An initial value problem is a differential equation combined with an initial 
+condition.
+$$
+y'(t)=f(t,y(t)) \quad;\quad y(y_0)=t_0.
+$$
+\pause
+Sophisticated floating point recipes exist to solve such initial value problems, but it is in general seen as a 
+hard problem to check the validity of the obtained result.
+\end{frame}
+\begin{frame}
+\frametitle{Ordinary Differential Equations}
+\begin{theorem}[Kawamura, 2010]
+Consider the IVP
+$$
+h'(t)=g(t,h(t)) \quad;\quad h(0)=0.
+$$
+\pause
+There exist functions $g: [0,1] \times [-1,1] \to \RR$ and $h: [0,1] \to [-1,1]$
+such that $g$ is computable in polynomial time and Lipschitz continuous
+but $h$ is PSPACE-hard.
+\end{theorem}
+\pause
+$h$ can be solved in PSPACE by the Euler method (Ko, 1983).\\
+There is a gap between theory and practice!
+\end{frame}
+\begin{frame}[<+->]
+\frametitle{Closing the gap}
+\begin{itemize}
+%	\item empirical evidence suggests that typical ODEs are apparently solved more efficient by sophisticated approaches
+	\item Parametrized analysis of such approaches will be performed, taking
+into account the number of steps and the intermediate precision required to attain guaranteed
+output error $2^{-n}$ in worst-case.
+	\item Methods will be implemented and empirically evaluated
+	\item A first step: ODEs with analytic right hand side
+\end{itemize}
+\end{frame}

@@ -1,0 +1,32 @@
+\section{Dynamic Systems and the Shadowing Lemma}
+\subsection{Overview}
+\begin{frame}[<+->]
+\frametitle{Shadowing}
+Consider the logistic map $f(x) = a x  (1-x)$ for $a \in \RR$ \\
+The orbit of $f$ is given by the recurrence 
+$y_{i+1} = f(y_i)$ and $y_0 \in \RR$.
+\pause
+\begin{definition}
+	The sequence $(x_i)$ is called an $\alpha$-pseudo-orbit for $f$ if 
+	$$
+	\| x_{i+1} - f(x_i) \| < \alpha
+	$$ 
+	A real orbit $(y_i)$ $\beta$-shadows a pseudo-orbit $(x_i)$ if 
+	$$
+	\| x_{i} - y_i \| < \beta
+	$$ 
+\end{definition}
+\pause
+Question (originally considered by Hammel, Yorke and Grebogi in 1987): How long does a shadowing orbit for the logistic map exist for different parameters $a$ and $x_0$?
+\end{frame}
+\begin{frame}[<+->]
+\frametitle{Computing the shadowing orbit}
+\begin{itemize}
+\item \irram can be used to exactly compute a shadowing orbit of length $N$
+\item First compute the psuedo orbit $(x_i)$
+\item Start with $y_N := x_N$ and iteratively compute $y_{i-1} = f^{-1}(y_i)$
+\item For $f^{-1} = 0.5 \pm \sqrt{0.25-\frac{x}{a}}$ choose the value that is on the same side of $0.5$ as $x_i$
+\item The backward procedure will stay close to the pseudo-orbit since $f^{-1}$ is a contraction.
+\item Note that the algorithm might fail
+\end{itemize}
+\end{frame}
