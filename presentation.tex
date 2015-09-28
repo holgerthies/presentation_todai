@@ -13,7 +13,8 @@
 \usepackage[all]{xy}
 \usepackage{xspace,listings,ulem,tikz}
 \usepackage[outline]{contour}
-\contourlength{1.2pt}
+\usepackage[absolute,overlay]{textpos}
+\usepackage{hhline}
 \usepackage[square,sort,comma,numbers]{natbib}
 \setbeamertemplate{footline}[frame number]
 \tikzset{
@@ -35,7 +36,6 @@
          extendedchars=true,         %
          breaklines=true,            % Zeilen werden Umgebrochen
          keywordstyle=\color{red},
-    		frame=b,         
  %        keywordstyle=[1]\textbf,    % Stil der Keywords
  %        keywordstyle=[2]\textbf,    %
  %        keywordstyle=[3]\textbf,    %
@@ -110,6 +110,15 @@ The University of Tokyo
 \vfill
 \end{frame}
 \include{introduction}
+\include{continuous}
+\begin{frame}
+	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+      \usebeamerfont{title}
+	Computable Reals in Practice\par%
+    \end{beamercolorbox}
+\vfill
+\end{frame}
+\include{practice}
 \begin{frame}
 	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
       \usebeamerfont{title}
@@ -120,14 +129,6 @@ The University of Tokyo
 \include{motivation}
 \include{powerseries}
 \include{implementation}
-\begin{frame}
-	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-      \usebeamerfont{title}
-	Case Study: Dynamic Systems and the Shadowing Lemma\par%
-    \end{beamercolorbox}
-\vfill
-\end{frame}
-\include{shadowing}
 \begin{frame}
 	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
       \usebeamerfont{title}
