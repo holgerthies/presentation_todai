@@ -2,7 +2,6 @@
 \usetheme{Darmstadt}
 \usepackage{etex}
 \providecommand\thispdfpagelabel[1]{}
-\usepackage[latin1]{inputenc}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
@@ -16,6 +15,7 @@
 \usepackage[absolute,overlay]{textpos}
 \usepackage{hhline}
 \usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{CJKutf8}
 \setbeamertemplate{footline}[frame number]
 \tikzset{
     onslide/.code args={<#1>#2}{% http://tex.stackexchange.com/a/6155/16595
@@ -119,111 +119,116 @@ The University of Tokyo
 \vfill
 \end{frame}
 \include{practice}
+\section{Analytic Functions}
 \begin{frame}
 	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
       \usebeamerfont{title}
-	Case Study: A Data Type for Analytic Functions\par%
+	Analytic Functions in \irram \par%
     \end{beamercolorbox}
 \vfill
 \end{frame}
 \include{motivation}
 \include{powerseries}
 \include{implementation}
+\section{ODEs}
+\subsection{ODEs}
 \begin{frame}
 	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
       \usebeamerfont{title}
-	Future Work\par%
+	Ordinary Differential Equations\par%
     \end{beamercolorbox}
 \vfill
 \end{frame}
+\include{odes}
+\section{Future}
 \include{future}
 \begin{frame}
 
     \vspace{\fill}
 \begin{beamercolorbox}[center,shadow=true,rounded=true]{note} 
-        \huge Thank you!
+  \huge \begin{CJK}{UTF8}{min}ダンケシェーン\end{CJK}
 \end{beamercolorbox}
 
     \vspace{\fill}
 \end{frame} 
-{
-\makeatletter % to change template
-    \setbeamertemplate{headline}[default] 
-    \def\beamer@entrycode{\vspace*{-\headheight}} 
-\makeatother
-\begin{frame}{References}
-\fontsize{6pt}{7.2}\selectfont 
-\nocite{*}
-\def\newblock{}
-\bibliographystyle{abbrv}
+%{
+%\makeatletter % to change template
+%    \setbeamertemplate{headline}[default] 
+%    \def\beamer@entrycode{\vspace*{-\headheight}} 
+%\makeatother
+%\begin{frame}{References}
+%\fontsize{6pt}{7.2}\selectfont 
+%\nocite{*}
+%\def\newblock{}
+%\bibliographystyle{abbrv}
 
-\begin{thebibliography}{10}   
+%\begin{thebibliography}{10}   
+%
+%  \beamertemplatearticlebibitems
+%  \bibitem{6}
+%	Harvey Friedman,
+%    \newblock \emph{ The computational complexity of maximization and integration}, Adv. in Math. 53 (1984), no. 1, 80-98. MR 748898 (86c:03037)
+%  \beamertemplatearticlebibitems
+%  \bibitem{1}
+%	Akitoshi Kawamura, Norbert Th. M\"{u}ller, Carsten R\"{o}snick, and
+%Martin Ziegler
+%    \newblock \emph{Parameterized Uniform Complexity in Numerics:
+%from Smooth to Analytic, from NP-hard to Polytime}, pre-print (2012).
+%
+%  \beamertemplatearticlebibitems
+%  \bibitem{7}
+%	Ker-I Ko,
+%    \newblock \emph{ Complexity theory of real functions}, Progress in Theoretical Computer Science, Birkh\"{a}user Boston Inc., Boston, MA, 1991.
+%MR 1137517 (93i:03057)
+%
+%  \beamertemplatearticlebibitems
+%  \bibitem{8}
+%	Ker-I Ko,
+%    \newblock \emph{  On the Computational Complexity of Ordinary Differential Equations}, Information and Control 58(1-3): 157-194 (1983)
+%
+%
+%  \beamertemplatearticlebibitems
+%  \bibitem{2}
+%	Norbert Th. M\"{u}ller,
+%    \newblock \emph{ The \irram: Exact Real Arithmetic in C++}, Computability and Complexity in Analysis (2000) .
+%
+%  \beamertemplatearticlebibitems
+%  \bibitem{Mul95}
+%	Norbert Th. M\"{u}ller,
+%    \newblock \emph{ Constructive aspects of analytic functions}, Computability
+%and Complexity in Analysis (Ker-I Ko and Klaus Weihrauch, eds.),
+%Informatik Berichte, vol. 190, FernUniversit\"{a}t Hagen, September
+%1995, CCA Workshop, Hagen, August 19-20, 1995, pp. 105-114.
+%
+%  \beamertemplatearticlebibitems
+%  \bibitem{4}
+%	Norbert Th. M\"{u}ller,
+%    \newblock \emph{ Uniform Computational Complexity of Taylor Series}, ICALP 1987: 435-444
+%
+%  \beamertemplatearticlebibitems
+%  \bibitem{5}
+%	Norbert Th. M\"{u}ller,
+%    \newblock \emph{ Polynomial Time Computation of Taylor Series}, Proc. 22 JAIIO - PANEL 1993
+%
+%  \beamertemplatearticlebibitems
+%  \bibitem{9}
+%	Marian B. Pour-El and J. Ian Richards,
+%    \newblock \emph{ Computability in analysis
+%and physics}, Perspectives in Mathematical Logic, Springer-Verlag,
+%Berlin, 1989. MR 1005942 (90k:03062)
+%  \beamertemplatearticlebibitems
+%  \bibitem{11}
+%	Florian Steinberg,
+%    \newblock \emph{A type of Taylor series for the C++ library iRRAM for exact real arithmetic} (draft) last edited November 28, 2013
+%  \beamertemplatearticlebibitems
+%  \bibitem{10}
+%	Klaus Weihrauch,
+%    \newblock \emph{Computable analysis}, Texts in Theoretical Computer
+%Science. An EATCS Series, Springer-Verlag, Berlin, 2000, An
+%introduction. MR 1795407 (2002b:03129)
+%
+%  \end{thebibliography}
 
-  \beamertemplatearticlebibitems
-  \bibitem{6}
-	Harvey Friedman,
-    \newblock \emph{ The computational complexity of maximization and integration}, Adv. in Math. 53 (1984), no. 1, 80-98. MR 748898 (86c:03037)
-  \beamertemplatearticlebibitems
-  \bibitem{1}
-	Akitoshi Kawamura, Norbert Th. M\"{u}ller, Carsten R\"{o}snick, and
-Martin Ziegler
-    \newblock \emph{Parameterized Uniform Complexity in Numerics:
-from Smooth to Analytic, from NP-hard to Polytime}, pre-print (2012).
-
-  \beamertemplatearticlebibitems
-  \bibitem{7}
-	Ker-I Ko,
-    \newblock \emph{ Complexity theory of real functions}, Progress in Theoretical Computer Science, Birkh\"{a}user Boston Inc., Boston, MA, 1991.
-MR 1137517 (93i:03057)
-
-  \beamertemplatearticlebibitems
-  \bibitem{8}
-	Ker-I Ko,
-    \newblock \emph{  On the Computational Complexity of Ordinary Differential Equations}, Information and Control 58(1-3): 157-194 (1983)
-
-
-  \beamertemplatearticlebibitems
-  \bibitem{2}
-	Norbert Th. M\"{u}ller,
-    \newblock \emph{ The \irram: Exact Real Arithmetic in C++}, Computability and Complexity in Analysis (2000) .
-
-  \beamertemplatearticlebibitems
-  \bibitem{Mul95}
-	Norbert Th. M\"{u}ller,
-    \newblock \emph{ Constructive aspects of analytic functions}, Computability
-and Complexity in Analysis (Ker-I Ko and Klaus Weihrauch, eds.),
-Informatik Berichte, vol. 190, FernUniversit\"{a}t Hagen, September
-1995, CCA Workshop, Hagen, August 19-20, 1995, pp. 105-114.
-
-  \beamertemplatearticlebibitems
-  \bibitem{4}
-	Norbert Th. M\"{u}ller,
-    \newblock \emph{ Uniform Computational Complexity of Taylor Series}, ICALP 1987: 435-444
-
-  \beamertemplatearticlebibitems
-  \bibitem{5}
-	Norbert Th. M\"{u}ller,
-    \newblock \emph{ Polynomial Time Computation of Taylor Series}, Proc. 22 JAIIO - PANEL 1993
-
-  \beamertemplatearticlebibitems
-  \bibitem{9}
-	Marian B. Pour-El and J. Ian Richards,
-    \newblock \emph{ Computability in analysis
-and physics}, Perspectives in Mathematical Logic, Springer-Verlag,
-Berlin, 1989. MR 1005942 (90k:03062)
-  \beamertemplatearticlebibitems
-  \bibitem{11}
-	Florian Steinberg,
-    \newblock \emph{A type of Taylor series for the C++ library iRRAM for exact real arithmetic} (draft) last edited November 28, 2013
-  \beamertemplatearticlebibitems
-  \bibitem{10}
-	Klaus Weihrauch,
-    \newblock \emph{Computable analysis}, Texts in Theoretical Computer
-Science. An EATCS Series, Springer-Verlag, Berlin, 2000, An
-introduction. MR 1795407 (2002b:03129)
-
-  \end{thebibliography}
-
-\end{frame}
-}
+%\end{frame}
+%}
 \end{document}

@@ -1,0 +1,51 @@
+\begin{frame}[<+->]
+\frametitle{Ordinary Differential Equations}
+An initial value problem is a differential equation combined with an initial 
+condition.
+$$
+y'(t)=f(t,y(t)) \quad;\quad y(y_0)=t_0.
+$$
+\pause
+Sophisticated floating point recipes exist to solve such initial value problems, but it is in general seen as a 
+hard problem to check the validity of the obtained result.
+\end{frame}
+\begin{frame}
+\frametitle{Ordinary Differential Equations}
+\begin{theorem}[Kawamura, 2010]
+Consider the IVP
+$$
+y'(t)=f(t,y(t)) \quad;\quad y(0)=0.
+$$
+\pause
+There exist functions $f: [0,1] \times [-1,1] \to \RR$ and $y: [0,1] \to [-1,1]$
+such that $f$ is computable in polynomial time and Lipschitz continuous
+but $y$ is PSPACE-hard.
+\end{theorem}
+\end{frame}
+\begin{frame}
+\frametitle{Euler method}
+To approximate the solution to the IVP
+$$
+y'(t)=f(t,y(t)) \quad;\quad y(0)=0.
+$$
+Choose some step size $h$ and iterate 
+\begin{eqnarray*}
+t_{n+1} &=& t_n+h \\
+y_{n+1} &=& y_n + h\cdot f(t_n, y_n) 
+\end{eqnarray*}
+Let $h := \frac{x}{k}$, then $y_n$ converges to $f(x)$ for $k \to \infty$.\\
+\pause
+$k$ grows exponentially with precision. The Euler method solves IVPs in PSPACE. (Ko)
+\end{frame}
+\begin{frame}[t]{ODEs with analytic right hand side}
+ Consider IVPs of the form 
+$$
+y'(t)=f(t,y(t)) \quad;\quad y(0)=0.
+$$
+where $f$ is analytic.
+Then 
+$$
+y'(t)=\sum_{i,k} c_{i,k}t^iy(t)^k
+$$
+It can be shown that $y$ is analytic and the coefficients of the power series for $y$ around $0$ can be computed by a recursion formula. (M\"{u}ller and Korovina)
+\end{frame}

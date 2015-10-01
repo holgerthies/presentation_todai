@@ -61,6 +61,16 @@
     is not computable.
   \end{example}
 \end{frame}
+\begin{frame}[t]{Polynomial Time Computable Numbers}
+  \begin{example}
+  $\pi$ is polynomial time computable. \\
+  The Bailey-Borwein-Plouffe formula states
+  $$
+  \pi = \sum_{k = 0}^{\infty}\left[ \frac{1}{16^k} \left( \frac{4}{8k + 1} - \frac{2}{8k + 4} - \frac{1}{8k + 5} - \frac{1}{8k + 6} \right) \right]
+  $$
+  and the error when considering only the first $n$ terms is bounded by $16^{-n}$
+  \end{example}
+\end{frame}
 \subsection{Real functions}
 
 \begin{frame}
@@ -97,4 +107,17 @@
 			A function $f:[0,1]\to\RR$ is called computable, \newline if there is a machine that,\newline when given oracle access to approximations to the argument $x$,\newline returns approximations to the value $f(x)$.
 		\end{definition}
 	\end{minipage}
+\end{frame}
+\begin{frame}[t]{Polynomial Time Computable Functions}
+  \begin{example}
+  The exponential function $e : [0,1] \to \R$ is polynomial time computable.
+  It is
+  $$
+  e^x = \sum_{n=0}^\infty \frac{x^n}{n!}
+  $$
+  and
+  $$
+  \left | \sum_{n=N+1}^\infty \frac{x^n}{n!} \right | \leq 2^{-(N+1)}
+  $$
+  \end{example}
 \end{frame}
