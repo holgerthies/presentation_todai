@@ -9,7 +9,7 @@
 \end{lemma}
 \pause
 $l$ can be used to make a tail estimate on
-$$ \left | \sum_{n \geq N} a_m z^n \right |  $$
+$$ \left | \sum_{n \geq N} a_n z^n \right |  $$
 \end{frame}
 %\begin{frame}
 %\frametitle{Finding $k$ and $A$}
@@ -22,7 +22,7 @@ $$ \left | \sum_{n \geq N} a_m z^n \right |  $$
 \begin{frame}[<+->]
 \frametitle{Analytic Functions and Computational Complexity}
 \begin{theorem}[Kawamura, R\"osnick, M\"uller, Ziegler (2013)]
-  The following operators are computable in time polynomial in $k+l$, where $2^{-n}$ is the output precision.
+  The following operators are computable in time polynomial in $n+l$, where $2^{-n}$ is the output precision.
 \begin{enumerate}
 \item evaluation
 \item addition and multiplication
@@ -40,7 +40,7 @@ $$ \left | \sum_{n \geq N} a_m z^n \right |  $$
     \node<1->  at (-0.2,-0.5) {$0$};
     \node<1->  at (4.0,-0.5) {$1$};
     \draw<1-> [thick,|-|] (0,0) -- (4,0);
-    \node<2->  at (1.5,.6) {$\frac 1{2k}$};
+    \node<2->  at (1.5,.6) {$\frac 1{l}$};
     \draw<2->  [dotted] (2.0,0) -- (2.0,1);
     \draw<1-> [domain = 0:8,color=gray] plot[samples=160] (\x-2, {sqrt(16-(\x-4)^2)*(1-1/(\x^2+1) + sin(\x) + (\x/7)^5-\x/6 +1.5- 1/((\x-5)^2+1))/2});
     \draw<1-> [domain = 0:8,color=gray] plot[samples=160] (\x-2, {1/(\x^2+1)/2 + sin(80*\x) + (\x/7)^5-\x/6 -1-sqrt(16-(\x-4)^2)/2});

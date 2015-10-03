@@ -1,6 +1,6 @@
-\section{Computing with Reals}
 \subsection{Overview}
 \begin{frame}
+  \frametitle{Overview}
   Different approaches to compute with real numbers on a computer
   \begin{itemize}[<+->]
       \item Floating-Point Arithmetic
@@ -10,7 +10,7 @@
       \item \textbf{Exact Real Arithmetic}
   \end{itemize}
 \end{frame}
-\subsection{DAGs}
+\subsection{Exact Real Arithmetic}
 \begin{frame}[<+->][t,fragile]
     \frametitle{Computations via DAGs: Top-Down Approach}
   \begin{lstlisting}
@@ -59,7 +59,7 @@
   \begin{center}
     \onslide<2->{
       \begin{tikzpicture}[remember picture, overlay,
-          ->,shorten >=1pt,auto,node distance=2.5cm,minimum
+          ->,shorten >=1pt,auto,node distance=2.4cm,minimum
             size=0.8cm,main node/.style={circle,fill=yellow!20,draw,font=\sffamily\small}]
     \node[main node] (1) {$+$};
     \node[main node] (2) [below left of=1] {$x_0$};
@@ -88,8 +88,17 @@
   }
   \end{center}
 \end{frame}
-\begin{frame}
+\begin{frame}[fragile]
   \frametitle{Computations via DAGs: Bottom-Up Approach}
+  \begin{textblock*}{\paperwidth}(-20pt,60pt)
+        \raggedright
+      \begin{lstlisting}
+        y = x[0];
+        for(int i=1; i<=1000; i++)
+          y += x[i];
+        \end{lstlisting}
+        \hspace{.5em}
+  \end{textblock*}
     \vfill
     \begin{center}
       \begin{tikzpicture}[remember picture, overlay,
@@ -141,7 +150,18 @@
     \item If at some point during the computation the precision is not sufficient, \irram recomputes the whole program from the start.
   \end{itemize}
 \end{frame}
-\begin{frame}\centering\huge{\textcolor{orange}{DEMO}}\end{frame}
+\begin{frame}
+  \begin{minipage}{0.47\textwidth}
+  \lstinputlisting{./code/logistic_map_double.cc}
+  \end{minipage}
+  \hfill
+  \pause
+  \noindent\fcolorbox{gray}{gray}{
+  \begin{minipage}{0.47\textwidth}
+  \lstinputlisting{./code/logistic_map_irram.cc}
+  \end{minipage}
+}
+\end{frame}
 \begin{frame}
   \centering
   \frametitle{Logistic Map}
