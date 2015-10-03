@@ -1,4 +1,4 @@
-\documentclass[xcolor=pdftex,dvipsnames,table]{beamer}
+\documentclass[handout,xcolor=pdftex,dvipsnames,table]{beamer}
 \usetheme{Darmstadt}
 \usepackage{etex}
 \providecommand\thispdfpagelabel[1]{}
@@ -89,7 +89,7 @@
 \newtheorem{representation1}{Representation 1} 
 \newtheorem{representation1b}{Representation 1'} 
 \newtheorem{representation2}{Representation 2} 
-\title[Computing with Reals]{Computing with Real Numbers}
+\title[Computable Analysis, Exact Arithmetic]{Computable Analysis and Exact Real Arithmetic}
 \author[ H. Thies]{
 		Holger Thies 
 }
@@ -140,6 +140,8 @@
 \include{odes}
 \section*{Future Work}
 \include{future}
+\section*{}
+\addtocounter{framenumber}{-1}
 \begin{frame}
 
     \vspace{\fill}
@@ -229,4 +231,23 @@
 
 %\end{frame}
 %}
+\addtocounter{framenumber}{-1}
+\begin{frame}
+  \frametitle{Evaluation\dots}
+  \includegraphics[width=0.9\textwidth]{sin_for_series_4_dep_on_n}
+\end{frame}
+\addtocounter{framenumber}{-1}
+\begin{frame}
+  \frametitle{Evaluation\dots}
+  \begin{minipage}{0.48\textwidth}
+  \includegraphics[width=1.2\textwidth]{time_0}
+  \end{minipage}
+  \begin{minipage}{0.48\textwidth}
+  \includegraphics[width=1.2\textwidth]{time_1}
+  \end{minipage}
+\end{frame}
+\addtocounter{framenumber}{-1}
+\begin{frame}
+  \includegraphics[width=1.0\textwidth]{time_2}
+\end{frame}
 \end{document}
